@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+<body>
+     
+    {% block contents %} 
+    <div class="alert alert-primary" role="alert">
+            당신이 입력한 텍스트는 {{total}}개의 단어로 구성되어 있습니다.
+    </div>
+    
+    <div class="panel panel-default">
+        <div class="panel-heading">입력한 텍스트 : </div>
+        <div class="panel-body">
+            {{ full }}
+        </div>
+    </div>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading" >단어 카운트 : </div>
+            <div class="panel-body">
+                
+                {% for word, howmany in dictionary %}
+                {{ word }} - {{ howmany }}번
+                <br>
+                {% endfor %}    
+            
+            </div>
+        </div>
+        
+    <div class= "replace">
+            <a href="{% url 'home' %}">WordCount 다시하기</a>
+            <div>Filename to Save As:
+                <input id="inputFileNameToSaveAs"></input>
+            </div>
+            <button type="button" class="btn btn-default btn-lg" aria-label="Left Align" onclick="saveTextAsFile()">
+                    <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>
+            </button>
+        </div>  
+    {% endblock %}
+    
+</body>

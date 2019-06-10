@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+<body>
+    {% block contents %}
+    <div class = "about">
+        <h1>ABOUT</h1>
+
+        <p>멋쟁이 사자처럼 7기 송태형이 만든 작품입니다.</p>
+        <p>멋쟁이 사자처럼 2차과제로 Django를 이용하여 WordCount를 작성해보고</p>
+        <p>부가적인 기능을 추가해보는 실습을 해보았습니다.</p>
+
+        <br>
+        <a href="{% url 'home' %}">WordCount 하러가기</a>
+        {% endblock %}
+    </div>    
+</body>

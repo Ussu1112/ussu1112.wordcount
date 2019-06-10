@@ -1,0 +1,23 @@
+h1 {
+   font-size: 36px;
+   font-weight: bold;
+}
+body {
+    font-size : 20px;
+}
+nav-item {
+    font-size : 20px;
+}
+.about{
+    text-align: center;
+}
+.replace{
+    display : flex;
+    justify-content: space-between;
+    margin-top : 20;
+    margin-bottom : 20;
+}
+.btn btn-primary btn-lg{
+    display : flex;
+    justify-content: flex-end;
+}

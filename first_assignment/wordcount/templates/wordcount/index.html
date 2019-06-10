@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+<body>
+    {% block contents %}            
+    <a href="{% url 'home' %}"><h1>WordCount</h1></a>
+
+    <form action = "{% url 'count' %}">
+        <div>
+        <textarea cols="40" rows="10" name="fulltext"></textarea>
+        <br>
+        </div>
+        <input type="submit" value="공백없이 Count!" class="btn btn-primary btn-lg">
+    </form>
+    <form action = "{% url 'blank' %}">
+            <div>
+            <textarea cols="40" rows="10" name="fulltext"></textarea>
+            <br>
+            </div>
+            <input type="submit" value="공백포함 Count!" class="btn btn-primary btn-lg">
+        </form>
+    {% endblock %}
+</body>
